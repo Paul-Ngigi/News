@@ -3,5 +3,91 @@
 
 {% block content %}
 
-    
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-info">Welcome to The News Article</h1>
+            <hr>
+            <h4 class="text-info">Africa's <b>number one</b> news providers</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">GENERAL NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(general)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">SPORTS NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(sports)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">BUSINESS NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(business)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">ENTERTAINMENT NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(entertainment)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">SCIENCE NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(science)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">HEALTH NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(health)}}
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-warning">TECHNOLOGY NEWS</h1>
+        </div>
+    </div>
+    <div class="row">
+
+        {{ macro.displaySources(technology)}}
+
+    </div>
+
+</div>
+
 {% endblock %}
