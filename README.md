@@ -2,7 +2,7 @@
 #### 18/04/2021
 #### By **Paul Ngigi**
 ## Description
-This is a site that enables users to view the latest news reports. The site 
+This is a site that enables users to view the latest news reports.
 ## Known Bugs
 There are currently no bugs. If you experience any bugs, don't hesitate to contact me.
 ## Technologies Used
