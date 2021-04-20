@@ -1,30 +1,23 @@
-from app import app
 import urllib.request
 import json
-from config import Config
-from models import models
+from .models import Sources, Headlines
 
-Sources = models.Sources
-Headlines = models.Headlines
 
-# Getting api key 
-api_key = app.config['API_KEY']
+# Getting api key
+api_key = None
 
 # Getting the base urls
-sources_base_url = ['SOURCES_BASE_URL']
-headlines_base_url = ['HEADLINES_BASE_URL']
+base_url = None
+headline_base_url = None
+
 
 
 def configue_request(app):
-    '''this function imports the urls and api key and makes their placeeholders global
-    variables which means they can be acccessed anywhere o this page.
-    '''
     global api_key,base_url,headline_base_url
 
-    base_url = app.config['SOURCES_URL']
     api_key=app.config['API_KEY']
-
-    headline_base_url=app.config['HEADLINES_URL']
+    base_url = app.config['SOURCE_BASE_URL']
+    headline_base_url=app.config['HEADLINES_BASE_URL']
 
 
 
@@ -36,6 +29,7 @@ def get_sources(category):
     with urllib.request.urlopen(full_url) as url:
         source_data = url.read()
         json_source_data = json.loads(source_data)
+        # print(json_source_data)
 
         source_list = None
 
@@ -61,6 +55,7 @@ def process_sources(sources):
 
         data_sources = Sources(id,name,desc,url,country)
         source_list.append(data_sources)
+        # print('full_headlines_url')
 
     return source_list
 
