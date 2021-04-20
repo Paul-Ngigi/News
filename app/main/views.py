@@ -17,3 +17,11 @@ def index():
     return render_template('index.html', title=title, sports=sports,business=business,
                            technology=technology,entertainment=entertainment,
                            general=general,health=health,science=science,)
+
+
+@main.route('/news/<id>')
+def articles(id):
+
+    articles_display = get_articles(id)
+    title=f'{id}'
+    return render_template('news.html',articles=articles_display,)
